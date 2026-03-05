@@ -1,0 +1,125 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+html = '''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>奇迹挂机</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}:root{--bg:#1a1a2e;--pn:#16213e;--cd:#0f3460;--ac:#e94560;--gd:#ffd700;--tx:#eee;--dm:#888}
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--tx);min-height:100vh;max-width:480px;margin:0 auto}
+.tp{background:linear-gradient(135deg,var(--pn),var(--cd));padding:10px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--ac),#f55);display:flex;align-items:center;justify-content:center;font-size:20px}
+.if{font-size:12px}.lv{color:var(--gd);font-weight:bold}.pw{color:var(--ac);font-size:11px}
+.rs{display:flex;gap:15px;font-size:12px}.g{color:var(--gd)}.bt{background:linear-gradient(180deg,#1a1a2e,#0d0d1a);padding:20px;min-height:180px;position:relative}
+.st{text-align:center;margin-bottom:15px;font-size:14px;color:var(--dm)}.sn{color:var(--gd);font-weight:bold}
+.cm{display:flex;justify-content:space-around;align-items:center;margin:20px 0}.ft{text-align:center}
+.ic{width:70px;height:70px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:35px}
+.pl .ic{background:linear-gradient(135deg,#4caf50,#2e7d32)}.en .ic{background:linear-gradient(135deg,#f44336,#c62828)}
+.vs{font-size:24px;font-weight:bold;color:var(--ac);font-style:italic}
+.hb{width:70px;height:6px;background:#333;border-radius:3px;margin:5px auto;overflow:hidden}
+.hp{height:100%;background:#4caf50;transition:width .2s}.en .hp{background:#f44336}
+.ht{font-size:10px;color:var(--dm)}.pg{width:60%;height:4px;background:#333;margin:15px auto;border-radius:2px}
+.pb{height:100%;background:var(--ac);width:0;transition:width .1s}
+.lg{background:rgba(0,0,0,.3);border-radius:5px;padding:8px;margin-top:8px;max-height:60px;overflow-y:auto;font-size:10px;color:var(--dm)}
+.dm{position:absolute;font-weight:bold;font-size:16px;color:#fff;text-shadow:0 0 5px #000;animation:.8s ease-out forwards;pointer-events:none;white-space:nowrap}
+.ct{font-size:22px;color:var(--gd)}@keyframes df{0%{transform:translateY(0)}100%{transform:translateY(-40px);opacity:0}}
+.bn{position:fixed;bottom:0;left:0;right:0;max-width:480px;margin:0 auto;background:var(--pn);display:flex;border-top:1px solid rgba(255,255,255,.1)}
+.nv{flex:1;text-align:center;padding:10px 5px;font-size:10px;color:var(--dm);cursor:pointer}.nv:active{transform:.95}.nv.active{color:var(--ac);background:rgba(233,69,96,.1)}
+.mn{padding-bottom:60px;min-height:calc(100vh-60px)}.pg{display:none;padding:15px}.pg.active{display:block}
+.of{background:linear-gradient(135deg,var(--cd),var(--pn));border-radius:10px;padding:15px;margin-bottom:15px;text-align:center}
+.ot{color:var(--gd);margin-bottom:10px}.bt{background:linear-gradient(135deg,var(--ac),#f55);border:none;color:#fff;padding:10px 25px;border-radius:20px;font-size:14px;cursor:pointer;margin-top:10px}
+.gd{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ac{background:var(--cd);border-radius:10px;padding:15px;text-align:center;cursor:pointer;border:1px solid rgba(255,255,255,.1)}
+.ac:active{transform:.95;background:var(--pn)}.ac .ic{font-size:24px;margin-bottom:5px}.ac .lb{font-size:11px;color:var(--dm)}
+.ts{display:flex;gap:8px;margin-bottom:12px;overflow-x:auto}.tb{background:var(--cd);padding:8px 14px;border-radius:12px;font-size:11px;white-space:nowrap;cursor:pointer}.tb.active{background:var(--ac)}
+.ls{max-height:calc(100vh-200px);overflow-y:auto}.cp{margin-bottom:12px}.cp-t{background:var(--cd);padding:10px;border-radius:8px;font-weight:bold;color:var(--gd);margin-bottom:8px}
+.it{background:var(--pn);margin-bottom:6px;border-radius:8px;padding:10px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}.it.cur{border:1px solid var(--ac);background:rgba(233,69,96,.1)}.it.dn{opacity:.5}
+.eq-g{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.eq{background:var(--cd);border-radius:8px;padding:8px;text-align:center;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;border:2px solid transparent;position:relative}
+.eq.ep{border-color:#9c27b0}.eq.emp{opacity:.3}.eq-ic{font-size:24px;margin-bottom:4px}.eq-nm{font-size:9px;color:var(--dm)}
+.q0{background:#fff}.q1{background:#4caf50}.q2{background:#2196f3}.q3{background:#9c27b0}.q4{background:#ff9800}.q5{background:#f44336}
+.pn{background:var(--pn);border-radius:10px;padding:15px}.p-tt{text-align:center;font-size:15px;font-weight:bold;margin-bottom:12px;color:var(--gd)}
+.eq-it{background:var(--cd);border-radius:10px;padding:12px;margin-bottom:10px;display:flex;align-items:center;gap:12px}.eq-i{font-size:35px}.eq-if{flex:1}.eq-n{font-weight:bold;margin-bottom:4px}.eq-d{font-size:11px;color:var(--dm)}.eq-lv{font-size:18px;font-weight:bold;color:var(--gd)}
+.syn-btn{width:100%;background:linear-gradient(135deg,var(--ac),#f55);border:none;color:#fff;padding:12px;border-radius:10px;font-size:14px;font-weight:bold;cursor:pointer}.syn-btn:active{transform:.98}.syn-btn:disabled{background:#333;color:#666;cursor:not-allowed}
+.mts{display:flex;gap:8px;margin:8px 0;flex-wrap:wrap}.mt{background:var(--cd);padding:4px 8px;border-radius:4px;font-size:10px;display:flex;align-items:center;gap:4px}
+.ch{background:var(--pn);border-radius:10px;padding:15px}.ch-h{display:flex;align-items:center;gap:12px;margin-bottom:15px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.1)}
+.ch-av{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--ac),#f55);display:flex;align-items:center;justify-content:center;font-size:25px}.ch-n{font-size:16px;font-weight:bold}.ch-l{color:var(--gd);font-size:12px}
+.at{display:grid;grid-template-columns:1fr 1fr;gap:8px}.at-it{background:var(--cd);padding:8px;border-radius:6px;display:flex;justify-content:space-between}.at-n{color:var(--dm);font-size:11px}.at-v{font-weight:bold;color:var(--gd)}
+.wel{display:grid;gap:10px}.wel-i{background:var(--pn);border-radius:10px;padding:12px;display:flex;align-items:center;gap:12px}.wel-ic{font-size:25px}.wel-if{flex:1}.wel-n{font-weight:bold;margin-bottom:4px}.wel-d{font-size:11px;color:var(--dm)}.wel-btn{background:var(--ac);border:none;color:#fff;padding:6px 12px;border-radius:12px;font-size:11px;cursor:pointer}
+.md{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.8);display:none;align-items:center;justify-content:center;z-index:1000;padding:20px}.md.on{display:flex}
+.md-in{background:var(--pn);border-radius:15px;padding:20px;width:100%;max-width:320px;text-align:center}.m-tt{font-size:18px;font-weight:bold;margin-bottom:12px}.m-tt.s{color:#4caf50}.m-tt.f{color:#f44336}.m-cnt{font-size:13px;color:var(--dm);margin:12px 0}.m-btn{background:var(--ac);border:none;color:#fff;padding:10px 25px;border-radius:20px;font-size:13px;cursor:pointer}
+.tst{position:fixed;top:70px;left:50%;transform:translateX(-50%);background:var(--cd);padding:8px 16px;border-radius:16px;font-size:12px;z-index:2000;max-width:90%}
+</style>
+</head>
+<body>
+<div class="tp"><div class="av">&#x1F47B;</div><div class="if"><div class="lv">Lv.<span id="plv">1</span></div><div class="pw">战力 <span id="pwr">0</span></div></div><div class="rs"><div class="g">&#x1FA99; <span id="gold">0</span></div><div>&#x1F48E; <span id="dia">0</span></div></div></div>
+<div class="mn">
+<div class="bt">
+<div class="st">第<span id="ch">1</span>章 - <span class="sn" id="sn">初入奇迹</span></div>
+<div class="cm">
+<div class="ft pl"><div class="ic" id="pi">&#x1F47B;</div><div class="hb"><div class="hp" id="php" style="width:100%"></div></div><div class="ht"><span id="ph">100</span>/<span id="pmax">100</span></div></div>
+<div class="vs">VS</div>
+<div class="ft en"><div class="ic" id="ei">&#x1F47F;</div><div class="hb"><div class="hp" id="ehp" style="width:100%"></div></div><div class="ht"><span id="eh">50</span>/<span id="emax">50</span></div></div>
+</div>
+<div class="pg"><div class="pb" id="prog"></div></div>
+<div class="lg" id="log"></div>
+</div>
+<div class="pg active" id="pg-home">
+<div class="of"><div class="ot">&#x1F4B0; 离线收益</div><div>离线: <span id="ot">0</span>分</div><div>金币: <span id="og">0</span></div><button class="bt" onclick="co()">领取</button></div>
+<div class="gd"><div class="ac" onclick="sp('adventure')"><div class="ic">&#x2694;</div><div class="lb">冒险</div></div><div class="ac" onclick="sp('synthesis')"><div class="ic">&#x1F4E6;</div><div class="lb">强化</div></div><div class="ac" onclick="sp('bag')"><div class="ic">&#x1F6CD;</div><div class="lb">背包</div></div><div class="ac" onclick="sp('character')"><div class="ic">&#x1F464;</div><div class="lb">角色</div></div></div>
+</div>
+<div class="pg" id="pg-adventure"><div class="ls" id="stages"></div></div>
+<div class="pg" id="pg-bag"><div class="ts"><div class="tb active" onclick="fb('all')">全部</div><div class="tb" onclick="fb('weapon')">武器</div><div class="tb" onclick="fb('armor')">防具</div><div class="tb" onclick="fb('accessory')">饰品</div></div><div class="eq-g" id="bag"></div></div>
+<div class="pg" id="pg-synthesis"><div class="ts"><div class="tb active" onclick="ss('enhance')">强化</div><div class="tb" onclick="ss('breakthrough')">突破</div><div class="tb" onclick="ss('evolve')">进化</div><div class="tb" onclick="ss('wing')">翅膀</div></div><div class="pn" id="syn"></div></div>
+<div class="pg" id="pg-character"><div class="ch"><div class="ch-h"><div class="ch-av">&#x1F47B;</div><div><div class="ch-n">勇者</div><div class="ch-l">Lv.<span id="clv">1</span></div></div></div><div class="at" id="attrs"></div></div></div>
+<div class="pg" id="pg-welfare"><div class="wel"><div class="wel-i"><div class="wel-ic">&#x1F31F;</div><div class="wel-if"><div class="wel-n">每日签到</div><div class="wel-d">连续签到奖励</div></div><button class="wel-btn" onclick="ds()">签到</button></div><div class="wel-i"><div class="wel-ic">&#x1F4DD;</div><div class="wel-if"><div class="wel-n">每日任务</div><div class="wel-d">完成任务奖励</div></div><button class="wel-btn" onclick="dt()">完成</button></div></div></div>
+</div>
+<div class="bn"><div class="nv active" onclick="sp('home')" data-p="home">&#x1F3E0;<br>首页</div><div class="nv" onclick="sp('adventure')" data-p="adventure">&#x2694;<br>冒险</div><div class="nv" onclick="sp('bag')" data-p="bag">&#x1F6CD;<br>背包</div><div class="nv" onclick="sp('synthesis')" data-p="synthesis">&#x1F4E6;<br>合成</div><div class="nv" onclick="sp('character')" data-p="character">&#x1F464;<br>角色</div><div class="nv" onclick="sp('welfare')" data-p="welfare">&#x1F31F;<br>福利</div></div>
+<div class="md" id="md"><div class="md-in"><div class="m-tt" id="mt">标题</div><div class="m-cnt" id="mc">内容</div><button class="m-btn" onclick="cm()">确定</button></div></div>
+<script>
+const qn=['白','绿','蓝','紫','橙','红'];
+const et={weapon:'武器',helmet:'头盔',armor:'铠甲',pants:'护腿',gloves:'护手',boots:'靴子',necklace:'项链',ring1:'戒指',ring2:'戒指',wing:'翅膀'};
+const ei={weapon:'&#x2694;',helmet:'&#x1F6E1;',armor:'&#x1F6E1;',pants:'&#x1F456;',gloves:'&#x1F9E4;',boots:'&#x1F45F;',necklace:'&#x1F4FF;',ring1:'&#x1F48D;',ring2:'&#x1F48D;',wing:'&#x1F426;'};
+const en=['&#x1F47F;','&#x1F9FF;','&#x1F47C;','&#x1F47B;','&#x1F916;'];
+const cn=['初入奇迹','神秘森林','黑暗洞穴','冰封山脉','烈焰山谷','亡灵古堡','海底世界','天空之城','地狱深渊','神界之门'];
+let gd={player:{lv:1,exp:0,expN:100,hp:100,mhp:100,atk:10,def:5,crit:5,critD:150,gold:1000,dia:0,pwr:0},stage:{ch:1,lv:1,mch:10,lpc:20},eq:{weapon:{id:'w1',n:'新手剑',t:'weapon',q:0,lv:1,enh:0,atk:5},helmet:{id:'h1',n:'新手头盔',t:'armor',q:0,lv:1,enh:0,def:3},armor:{id:'a1',n:'新手护甲',t:'armor',q:0,lv:1,enh:0,def:5},pants:{id:'p1',n:'新手护腿',t:'armor',q:0,lv:1,enh:0,def:3},gloves:{id:'g1',n:'新手护手',t:'armor',q:0,lv:1,enh:0,def:2},boots:{id:'b1',n:'新手靴子',t:'armor',q:0,lv:1,enh:0,def:2},necklace:{id:'n1',n:'新手项链',t:'accessory',q:0,lv:1,enh:0,hp:20},ring1:{id:'r1',n:'新手戒指',t:'accessory',q:0,lv:1,enh:0,atk:3},ring2:null,wing:null},inv:[],mat:{bless:10,soul:10,maya:0,create:0,feather:0},ls:Date.now()};
+let bi=null,emy={hp:50,mhp:50,atk:5,def:0},cs='enhance',cf='all';
+function init(){lg();cp();ui();rl();rb();rs();rc();sb();setInterval(sg,30000)}
+function cp(){let p=gd.player,pt=Math.floor(p.atk*2+p.def*1.5+p.mhp*0.5+p.crit*10);for(let k in gd.eq){let e=gd.eq[k];if(e)pt+=(e.atk||0)+(e.def||0)+(e.hp||0)+e.enh*50}p.pwr=pt}
+function ui(){document.getElementById('plv').innerText=gd.player.lv;document.getElementById('pwr').innerText=gd.player.pwr;document.getElementById('gold').innerText=fn(gd.player.gold);document.getElementById('dia').innerText=fn(gd.player.dia);document.getElementById('ch').innerText=gd.stage.ch;document.getElementById('sn').innerText=cn[gd.stage.ch-1]||'';let now=Date.now();let t=Math.floor((now-gd.ls)/60000);document.getElementById('ot').innerText=t;document.getElementById('og').innerText=fn(t*10);document.getElementById('clv').innerText=gd.player.lv}
+function fn(n){return n>=10000?(n/10000).toFixed(1)+'w':n>=1000?(n/1000).toFixed(1)+'k':n}
+function sp(p){document.querySelectorAll('.pg').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.nv').forEach(x=>x.classList.remove('active'));document.getElementById('pg-'+p).classList.add('active');document.querySelector('[data-p="'+p+'"]').classList.add('active');if(p==='adventure')rl();if(p==='bag')rb();if(p==='synthesis')rs();if(p==='character')rc()}
+function rl(){let h='';for(let c=1;c<=gd.stage.mch;c++){h+='<div class="cp"><div class="cp-t">第'+c+'章 '+(cn[c-1]||'')+'</div>';for(let l=1;l<=gd.stage.lpc;l++){let cur=c===gd.stage.ch&&l===gd.stage.lv;let pas=c<gd.stage.ch||(c===gd.stage.ch&&l<gd.stage.lv);h+='<div class="it '+(cur?'cur':'')+' '+(pas?'dn':'')+'" onclick="sss('+c+','+l+')"><span>第'+l+'关'+(l===20?' BOSS':'')+'</span><span>+'+(c*l)+'金</span></div>'}h+='</div>'}document.getElementById('stages').innerHTML=h}
+function sss(ch,lv){gd.stage.ch=ch;gd.stage.lv=lv;se();ui();sp('home');ts('切换到第'+ch+'章 第'+lv+'关')}
+function se(){let s=gd.stage,bhp=50+(s.ch-1)*30+s.lv*5;emy={hp:bhp,mhp:bhp,atk:5+s.ch*2+s.lv,def:s.ch};document.getElementById('ei').innerHTML=en[(s.ch+s.lv)%en.length];ub()}
+function ub(){document.getElementById('php').style.width=(gd.player.hp/gd.player.mhp*100)+'%';document.getElementById('ph').innerText=Math.floor(gd.player.hp)+'/'+gd.player.mhp;document.getElementById('ehp').style.width=(emy.hp/emy.mhp*100)+'%';document.getElementById('eh').innerText=Math.floor(emy.hp)+'/'+emy.mhp}
+function sb(){se();let pg=0;bi=setInterval(()=>{pg+=2;document.getElementById('prog').style.width=pg+'%';if(pg>=100){pg=0;br()}},100)}
+function br(){let p=gd.player,e=emy;let pd=Math.max(1,p.atk-e.def);let ic=Math.random()*100<p.crit;if(ic)pd=Math.floor(pd*p.critD/100);e.hp-=pd;dd(pd,ic,'en');al((ic?'暴击! ':'')+'造成'+pd+'伤害');if(e.hp<=0){sc();return}let ed=Math.max(1,e.atk-p.def);p.hp-=ed;dd(ed,false,'pl');if(p.hp<=0){p.hp=0;sf();return}ub()}
+function dd(dmg,crit,tgt){let el=document.createElement('div');el.className='dm'+(crit?' ct':'');el.innerText=dmg;el.style.left=(tgt==='en'?70:30)+'%';el.style.top='35%';document.querySelector('.bt').appendChild(el);setTimeout(()=>el.remove(),800)}
+function al(txt){let lg=document.getElementById('log');let it=document.createElement('div');it.innerText=txt;lg.insertBefore(it,lg.firstChild);if(lg.children.length>10)lg.lastChild.remove()}
+function sc(){let g=gd.stage.ch*gd.stage.lv*5;gd.player.gold+=g;al('关卡完成! 获得'+g+'金',true);gd.mat.bless+=Math.floor(Math.random()*3);gd.mat.soul+=Math.floor(Math.random()*2);if(Math.random()<0.3){let eq=ge();gd.inv.push(eq);al('获得装备: '+eq.n,true)}if(gd.stage.lv>=20){gd.stage.ch++;gd.stage.lv=1}else{gd.stage.lv++}se();cp();ui()}
+function ge(){let ts=['weapon','helmet','armor','pants','gloves','boots','necklace','ring1'];let t=ts[Math.floor(Math.random()*ts.length)];let q=Math.random()<0.6?0:Math.random()<0.7?1:Math.random()<0.85?2:3;return{id:Date.now(),n:et[t]+qn[q],t:t,q:q,lv:gd.stage.ch,enh:0,atk:Math.floor(Math.random()*10+5)*q,def:Math.floor(Math.random()*8+2)*q,hp:Math.floor(Math.random()*20+10)*q}}
+function sf(){al('挑战失败!');gd.player.hp=gd.player.mhp;ub()}
+function co(){let t=Math.floor((Date.now()-gd.ls)/60000);let g=t*10;if(g>0){gd.player.gold+=g;gd.ls=Date.now();ui();ts('获得'+g+'金币')}else ts('无离线收益')}
+function ts(msg){let t=document.createElement('div');t.className='tst';t.innerText=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),2000)}
+function fb(f){cf=f;document.querySelectorAll('.tb').forEach(x=>x.classList.remove('active'));event.target.classList.add('active');rb()}
+function rb(){let h='';let inv=cf==='all'?gd.inv:gd.inv.filter(e=>e.t===cf||(cf==='armor'&&['helmet','armor','pants','gloves','boots'].includes(e.t))||(cf==='weapon'&&e.t==='weapon')||(cf==='accessory'&&['necklace','ring1'].includes(e.t)));inv.forEach(e=>{h+='<div class="eq"><div class="eq-ic">'+ei[e.t]+'</div><div class="eq-nm">'+e.n+'</div><div class="q'+e.q+'" style="position:absolute;top:4px;right:4px;width:8px;height:8px;border-radius:50%"></div></div>'});if(inv.length===0)h='<div style="text-align:center;color:#888;padding:20px">背包为空</div>';document.getElementById('bag').innerHTML=h}
+function ss(s){cs=s;document.querySelectorAll('.ts .tb').forEach(x=>x.classList.remove('active'));event.target.classList.add('active');rs()}
+function rs(){let eq=gd.eq.weapon;if(!eq)eq=gd.eq.helmet;let p=document.getElementById('syn');if(cs==='enhance'){p.innerHTML='<div class="p-tt">装备强化 +1~+9</div><div class="eq-it"><div class="eq-i">'+ei[eq.t]+'</div><div class="eq-if"><div class="eq-n">'+eq.n+'</div><div class="eq-d">攻击+'+eq.atk+' 防御+'+eq.def+'</div></div><div class="eq-lv">+'+eq.enh+'</div></div><div class="mts"><div class="mt">&#x2728;祝福x'+gd.mat.bless+'</div><div class="mt">&#x1FA92;灵魂x'+gd.mat.soul+'</div></div><button class="syn-btn" onclick="enhance()">强化 (消耗100金)</button>'}else if(cs==='breakthrough'){p.innerHTML='<div class="p-tt">突破合成 +10~+15</div><div class="eq-it"><div class="eq-i">'+ei[eq.t]+'</div><div class="eq-if"><div class="eq-n">'+eq.n+'</div><div class="eq-d">强化等级+'+eq.enh+'</div></div><div class="eq-lv">+'+(eq.enh>=10?eq.enh:'--')+'</div></div><div class="mts"><div class="mt">&#x1F48E;玛雅x'+gd.mat.maya+'</div></div><button class="syn-btn" '+(eq.enh<9?'disabled ':'onclick="breakthrough()" ')+'>突破 (需+9装备)</button>'}else if(cs==='evolve'){p.innerHTML='<div class="p-tt">进化合成 (普通→卓越)</div><div class="mts"><div class="mt">&#x1F4E6;同部位+9装备x2</div><div class="mt">&#x2728;创造宝石x'+gd.mat.create+'</div></div><button class="syn-btn" onclick="evolve()">进化</button>'}else if(cs==='wing'){p.innerHTML='<div class="p-tt">翅膀合成</div><div class="eq-it"><div class="eq-i">&#x1F426;</div><div class="eq-if"><div class="eq-n">'+(gd.eq.wing?gd.eq.wing.n:'未装备')+'</div></div></div><div class="mts"><div class="mt">&#x1F48E;玛雅x'+gd.mat.maya+'</div><div class="mt">&#x1FAB6;羽毛x'+gd.mat.feather+'</div></div><button class="syn-btn" onclick="makeWing()">合成翅膀</button>'}}
+function enhance(){if(gd.player.gold>=100&&gd.mat.bless>=1){gd.player.gold-=100;gd.mat.bless--;if(Math.random()<0.9||gd.eq.weapon.enh<6){gd.eq.weapon.enh++;ts('强化成功! +'+gd.eq.weapon.enh)}else{gd.eq.weapon.enh=Math.max(0,gd.eq.weapon.enh-1);ts('强化失败! 降级')}cp();ui();rs()}else ts('资源不足')}
+function breakthrough(){if(gd.mat.maya>=1){gd.mat.maya--;let rate=[0.6,0.5,0.4,0.3,0.2,0.1][gd.eq.weapon.enh-10];if(Math.random()<rate){gd.eq.weapon.enh=15;ts('突破成功! +15')}else{gd.eq.weapon.enh=9;ts('突破失败! 回到+9')}cp();ui();rs()}else ts('需要玛雅之石')}
+function evolve(){if(gd.mat.create>=1){gd.mat.create--;gd.eq.weapon.q=3;gd.eq.weapon.n='卓越'+gd.eq.weapon.n;ts('进化成功! 获得卓越装备');cp();ui();rs()}else ts('需要创造宝石')}
+function makeWing(){if(gd.mat.maya>=1&&gd.mat.feather>=1){gd.mat.maya--;gd.mat.feather--;gd.eq.wing={n:'一阶翅膀',q:3,enh:0};ts('合成成功! 获得翅膀');cp();ui();rs()}else ts('需要玛雅之石和羽毛')}
+function rc(){let attrs=[{n:'攻击',v:gd.player.atk},{n:'生命',v:gd.player.mhp},{n:'防御',v:gd.player.def},{n:'暴击',v:gd.player.crit+'%'},{n:'暴伤',v:gd.player.critD+'%'}];document.getElementById('attrs').innerHTML=attrs.map(a=>'<div class="at-it"><span class="at-n">'+a.n+'</span><span class="at-v">'+a.v+'</span></div>').join('')}
+function ds(){gd.player.dia+=10;ts('签到成功! +10钻石');ui()}
+function dt(){gd.player.gold+=500;ts('任务完成! +500金币');ui()}
+function lg(){try{gd=JSON.parse(localStorage.getItem('miracle'))}catch(e){}}
+function sg(){localStorage.setItem('miracle',JSON.stringify(gd))}
+init();
+<\/script>
+<\/body>
+<\/html>'''
+
+with open(r'F:\openclaw-workspace\miracle-idle\index.html','w',encoding='utf-8') as f:
+    f.write(html)
+print('OK - index.html created')
